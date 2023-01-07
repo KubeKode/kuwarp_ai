@@ -9,29 +9,34 @@
 
 body {
  background-image: url('./assets/bgr.jpg');
+opacity: 0.5 rgb(248, 246, 246);
+
 }
 
 #app {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   /* background: #343541; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  
 }
-
+#message_container{
+/* background-image: url('./assets/bgr.jpg'); */
+overflow: auto;
+}
 #chat_container {
   
   flex: 1;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-background-color: #5436DA;
+  overflow: scroll;
+background-color: #42dce7;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -57,6 +62,8 @@ background-color: #5436DA;
 .chat {
   width: 100%;
   max-width: 1280px;
+  height: inherit;
+  max-height: 900px;
   margin: 0 auto;
 
   display: flex;
@@ -66,11 +73,10 @@ background-color: #5436DA;
 }
 
 .profile {
-  width: 36px;
-  height: 36px;
-  border-radius: 5px;
-
-  /* background: #5436DA; */
+  width: 46px;
+  height: 56px;
+  border-radius: 15px;
+  background: #03070a;
 
   display: flex;
   justify-content: center;
@@ -94,7 +100,7 @@ background-color: #5436DA;
   font-size: 20px;
 
   max-width: 100%;
-  overflow-x: scroll;
+  overflow-y: scroll;
 
   /*
    * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
@@ -149,4 +155,38 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+
+@media (min-width:100px) and (max-width:565px) {
+  
+  #app {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    /* background: #343541; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #chat_container {
+    
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  background-color: #5436DA;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+  }
+  
 }
