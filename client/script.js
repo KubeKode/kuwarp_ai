@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
    
     loader(messageWindow)
 
-    const response = await fetch('https://kubekode-aervice.onrender.com/', {
+    const response = await fetch('http://localhost:3010', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
